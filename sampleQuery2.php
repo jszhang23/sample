@@ -14,14 +14,14 @@ $_POST['txtFirstName'] = 'Cosmo G.';
 $_POST['txtLastName'] = 'Spacely';
 
 // create array to hold values for query
-$data = array();
+$dataRecord = array();
 
 // retreive values from form and store in $data array
 $firstName = htmlentities($_POST['txtFirstName'], ENT_QUOTES, 'UTF-8');
-$data[] = $firstName;
+$dataRecord[] = $firstName;
 
 $lastName = htmlentities($_POST['txtLastName'], ENT_QUOTES, 'UTF-8');
-$data[] = $lastName;
+$dataRecord[] = $lastName;
 
 $query = 'INSERT INTO tblPeople SET ';
 $query .= 'fldFirstName = ?, ';
@@ -33,7 +33,7 @@ $records = $thisDatabaseWriter->testSecurityQuery($query, 0);
 
 // lets print out the data array so we can see what values would replace the ?
 print '<p>Contents of the array<pre>';
-print_r($data);
+print_r($dataRecord);
 print '</pre></p>';
 
 // this will insert the data, since i dont want Mr. Spacely entered into my table
