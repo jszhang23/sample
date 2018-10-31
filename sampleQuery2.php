@@ -10,7 +10,7 @@ include 'top.php';
 //##############################################################################
 // This example does not have a form so these two lines are just to put values
 // in manually for this example.
-$_POST['txtFirstName'] = 'Cosmo G.';
+$_POST['txtFirstName'] = 'Chris';
 $_POST['txtLastName'] = 'Spacely';
 
 // create array to hold values for query
